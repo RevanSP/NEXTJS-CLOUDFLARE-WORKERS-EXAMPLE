@@ -155,16 +155,53 @@ export default defineCloudflareConfig({});`}
             CREATE & UPDATE DEPLOYMENT
           </h2>
           <p className="mb-4">
-            After making changes to your project, you can redeploy it to
-            Cloudflare Workers by simply running:
+            Create and after making changes to your project, you can redeploy it
+            to Cloudflare Workers by simply running:
           </p>
-          <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
-            {`bun run deploy`}
-          </pre>
+          <code className="bg-[#222] px-1 rounded">bun run deploy</code>
           <p className="mt-4">
             This command will rebuild and update your existing deployment with
             the latest changes.
           </p>
+          <div className="mt-6">
+            <h3 className="text-lg font-semibold mb-2 text-secondary">
+              CONFIGURE BUILD & DEPLOY COMMANDS IN CLOUDFLARE DASHBOARD
+            </h3>
+            <p className="mb-4">
+              You can also set these commands directly in the Cloudflare Workers
+              Dashboard:
+            </p>
+            <ol className="list-decimal pl-6 text-white mb-4">
+              <li>
+                Go to <strong>Workers & Pages</strong> from the Cloudflare
+                Dashboard
+              </li>
+              <li>Click on your deployed Worker</li>
+              <li>
+                Navigate to <strong>Settings</strong> &gt;{" "}
+                <strong>Build Configuration</strong>
+              </li>
+              <li>Fill in the fields as follows:</li>
+            </ol>
+            <ul className="list-disc pl-6 text-white mb-4">
+              <li>
+                <code>Build Command</code>:{" "}
+                <code className="bg-[#222] px-1 rounded">bun run build</code>
+              </li>
+              <li>
+                <code>Deploy Command</code>:{" "}
+                <code className="bg-[#222] px-1 rounded">bun run deploy</code>
+              </li>
+              <li>
+                <code>Non-production Branch Deploy Command</code>:{" "}
+                <code className="bg-[#222] px-1 rounded">bun run deploy</code>
+              </li>
+            </ul>
+            <p className="text-white">
+              This ensures that deployments are handled automatically when you
+              push changes to your repository.
+            </p>
+          </div>
         </section>
       </div>
     </>
