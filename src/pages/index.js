@@ -31,11 +31,14 @@ export default function Home() {
           <ol class="list-decimal pl-6 text-white mb-4">
             <li>
               <code class="bg-[#222] px-1 rounded">
-                git clone https://github.com/RevanSP/NEXTJS-CLOUDFLARE-WORKERS-EXAMPLE.git
+                git clone
+                https://github.com/RevanSP/NEXTJS-CLOUDFLARE-WORKERS-EXAMPLE.git
               </code>
             </li>
             <li>
-              <code class="bg-[#222] px-1 rounded">cd NEXTJS-CLOUDFLARE-WORKERS-EXAMPLE</code>
+              <code class="bg-[#222] px-1 rounded">
+                cd NEXTJS-CLOUDFLARE-WORKERS-EXAMPLE
+              </code>
             </li>
             <li>
               <code class="bg-[#222] px-1 rounded">bun install</code>
@@ -203,6 +206,9 @@ export default defineCloudflareConfig({});`}
             </p>
           </div>
         </section>
+        <footer className="mt-12 text-center text-gray-600">
+          <p>ReiiV. All rights reserved.</p>
+        </footer>
       </div>
     </>
   );
