@@ -160,10 +160,10 @@ export default defineCloudflareConfig({});`}
           <p className="mb-4">
             To securely store sensitive data like API keys, use the Wrangler CLI
             secret feature. For example, to set a secret named{" "}
-            <code>RA_API_KEY</code>, run:
+            <code>API_KEY</code>, run:
           </p>
           <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
-            {`bunx wrangler secret put RA_API_KEY`}
+            {`bunx wrangler secret put API_KEY`}
           </pre>
           <p className="my-4">
             After running the command, you will see a prompt like:
@@ -173,7 +173,7 @@ export default defineCloudflareConfig({});`}
 ─────────────────────────────────────────────
 √ Enter a secret value: ... ********************************
 🌀 Creating the secret for the Worker "your-worker-name"
-✨ Success! Uploaded secret RA_API_KEY`}
+✨ Success! Uploaded secret API_KEY`}
           </pre>
           <p className="my-4">
             You’ll be asked to input the secret’s value directly in the terminal
@@ -184,7 +184,7 @@ export default defineCloudflareConfig({});`}
             Access the secret in your Worker code like this:
           </p>
           <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
-            {`const raApiKey = env.RA_API_KEY;`}
+            {`const apiKey = env.API_KEY;`}
           </pre>
           <p className="mb-4">
             Remember to configure your <code>wrangler.toml</code> file properly
