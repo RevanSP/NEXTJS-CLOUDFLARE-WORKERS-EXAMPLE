@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
       <div className="container max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <div className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
-          <header class="p-6 flex flex-col justify-center items-center">
+          <header className="p-6 flex flex-col justify-center items-center">
             <Image
               unoptimized
               src="https://raw.githubusercontent.com/andregans/code_logotype/refs/heads/main/Next%20JS%20Logotype.png"
@@ -17,96 +17,96 @@ export default function Home() {
               width={0}
               sizes="100vw"
               height={0}
-              class="w-56"
+              className="w-56"
             />
-            <h1 class="text-3xl font-bold text-center text-secondary mt-4">
+            <h1 className="text-3xl font-bold text-center text-secondary mt-4">
               Next.js on Cloudflare Workers
             </h1>
           </header>
         </div>
-        <section class="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
-          <h2 class="text-2xl font-semibold mb-4 text-secondary">
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
             CLONE REPOSITORY
           </h2>
-          <ol class="list-decimal pl-6 text-white mb-4">
+          <ol className="list-decimal pl-6 text-white mb-4">
             <li>
-              <code class="bg-[#222] px-1 rounded">
+              <code className="bg-[#222] px-1 rounded">
                 git clone
                 https://github.com/RevanSP/NEXTJS-CLOUDFLARE-WORKERS-EXAMPLE.git
               </code>
             </li>
             <li>
-              <code class="bg-[#222] px-1 rounded">
+              <code className="bg-[#222] px-1 rounded">
                 cd NEXTJS-CLOUDFLARE-WORKERS-EXAMPLE
               </code>
             </li>
             <li>
-              <code class="bg-[#222] px-1 rounded">bun install</code>
+              <code className="bg-[#222] px-1 rounded">bun install</code>
             </li>
           </ol>
         </section>
-        <section class="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
-          <h2 class="text-2xl font-semibold mb-4 text-secondary">
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
             TESTING YOUR API
           </h2>
-          <p class="mb-4">
+          <p className="mb-4">
             To test your newly created REST API, visit the{" "}
-            <code class="bg-[#222] px-1 rounded">/api/hello</code> route on
+            <code className="bg-[#222] px-1 rounded">/api/hello</code> route on
             Cloudflare Workers.
           </p>
-          <p class="mb-4">
+          <p className="mb-4">
             Example URL:{" "}
-            <code class="bg-[#222] px-1 rounded">
+            <code className="bg-[#222] px-1 rounded">
               https://nextjs-cloudflare-workers.revanspstudy28.workers.dev/api/hello
             </code>
           </p>
-          <p class="mb-4">Expected JSON response:</p>
-          <pre class="p-4 rounded-lg text-xs bg-[#222] overflow-x-auto">
+          <p className="mb-4">Expected JSON response:</p>
+          <pre className="p-4 rounded-lg text-xs bg-[#222] overflow-x-auto">
             {`{
   "name": "John Doe"
 }`}
           </pre>
         </section>
-        <section class="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
-          <h2 class="text-2xl font-semibold mb-4 text-secondary">
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
             CLOUDFLARE WORKERS FEATURES SETUP
           </h2>
-          <p class="mb-4">
+          <p className="mb-4">
             This project uses OpenNext and Cloudflare Workers for deployment.
             Here are the key configuration files and their features:
           </p>
-          <div class="mb-4">
-            <h3 class="text-lg font-semibold mb-2 text-secondary">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold mb-2 text-secondary">
               open-next.config.ts
             </h3>
-            <p class="mb-2">
+            <p className="mb-2">
               This file configures OpenNext for Cloudflare Workers deployment:
             </p>
-            <pre class="p-4 rounded-lg text-xs overflow-x-auto bg-[#222]">
+            <pre className="p-4 rounded-lg text-xs overflow-x-auto bg-[#222]">
               {`import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
 export default defineCloudflareConfig({});`}
             </pre>
           </div>
-          <div class="mb-4">
-            <h3 class="text-lg font-semibold mb-2 text-secondary">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold mb-2 text-secondary">
               wrangler.jsonc
             </h3>
-            <p class="mb-2">
+            <p className="mb-2">
               The Wrangler configuration file includes several important
               features:
             </p>
-            <ul class="list-disc pl-6 text-white mb-4">
+            <ul className="list-disc pl-6 text-white mb-4">
               <li>Node.js compatibility mode enabled</li>
               <li>Global fetch API support</li>
               <li>Assets binding for static files</li>
               <li>R2 bucket support (configurable)</li>
               <li>
                 You can set your Worker name by modifying the{" "}
-                <code class="bg-[#222] px-1 rounded">name</code> field.
+                <code className="bg-[#222] px-1 rounded">name</code> field.
               </li>
             </ul>
-            <pre class="p-4 rounded-lg text-xs overflow-x-auto bg-[#222]">
+            <pre className="p-4 rounded-lg text-xs overflow-x-auto bg-[#222]">
               {`{
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
@@ -124,19 +124,19 @@ export default defineCloudflareConfig({});`}
 }`}
             </pre>
           </div>
-          <div class="mb-4">
-            <h3 class="text-lg font-semibold mb-2 text-secondary">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold mb-2 text-secondary">
               Incremental Static Regeneration (ISR)
             </h3>
-            <p class="mb-2">
+            <p className="mb-2">
               To enable ISR functionality in your Next.js application on
               Cloudflare Workers, you need to configure Cloudflare R2 storage:
             </p>
-            <ol class="list-decimal pl-6 text-white mb-4">
+            <ol className="list-decimal pl-6 text-white mb-4">
               <li>Create an R2 bucket in your Cloudflare account</li>
               <li>Add the R2 bucket configuration to your wrangler.jsonc:</li>
             </ol>
-            <pre class="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
+            <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
               {`{
   "r2_buckets": [
     {
@@ -146,12 +146,50 @@ export default defineCloudflareConfig({});`}
   ]
 }`}
             </pre>
-            <p class="mt-4 text-white">
+            <p className="mt-4 text-white">
               The R2 bucket is used to store and serve regenerated pages for
               ISR. Without R2 storage configured, ISR features will not work
               properly on Cloudflare Workers.
             </p>
           </div>
+        </section>
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
+            SETTING SECRETS WITH WRANGLER CLI
+          </h2>
+          <p className="mb-4">
+            To securely store sensitive data like API keys, use the Wrangler CLI
+            secret feature. For example, to set a secret named{" "}
+            <code>RA_API_KEY</code>, run:
+          </p>
+          <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
+            {`bunx wrangler secret put RA_API_KEY`}
+          </pre>
+          <p className="my-4">
+            After running the command, you will see a prompt like:
+          </p>
+          <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
+            {`⛅️ wrangler 4.24.3 (update available 4.25.0)
+─────────────────────────────────────────────
+√ Enter a secret value: ... ********************************
+🌀 Creating the secret for the Worker "your-worker-name"
+✨ Success! Uploaded secret RA_API_KEY`}
+          </pre>
+          <p className="my-4">
+            You’ll be asked to input the secret’s value directly in the terminal
+            (input is hidden for security). Once successful, the secret will be
+            available to your Worker as an environment variable.
+          </p>
+          <p className="mb-4">
+            Access the secret in your Worker code like this:
+          </p>
+          <pre className="p-4 rounded-lg bg-[#222] text-xs overflow-x-auto">
+            {`const raApiKey = env.RA_API_KEY;`}
+          </pre>
+          <p className="mb-4">
+            Remember to configure your <code>wrangler.toml</code> file properly
+            to bind environment variables to your Worker.
+          </p>
         </section>
         <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
           <h2 className="text-2xl font-semibold mb-4 text-secondary">
